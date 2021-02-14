@@ -1,4 +1,10 @@
+const listingsResolver = require('./ListingsResolver');
+
 module.exports = {
-  Query: {},
-  Mutation: {},
+  Query: {
+    ...listingsResolver.query,
+  },
+  Mutation: {
+    ...listingsResolver.mutation,
+  },
 };

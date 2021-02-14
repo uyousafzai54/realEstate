@@ -1,18 +1,40 @@
-// route backend file
-const { ApolloServer } = require('apollo-server');
+const { ApolloServer } = require('apollo-server-express');
+const mongoose = require('mongoose');
 const resolvers = require('./resolvers');
 const typeDefs = require('./typeDefs');
-const db = require('./db');
+const express = require('express');
+const cors = require('cors');
+const morgan = require('morgan');
+
 require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
 
+const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: ({ req }) => ({ req, db }),
 });
 
-server.listen({ port: PORT }).then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
-});
+server.applyMiddleware({ app });
+
+app.use(cors());
+app.use(morgan('combined')); // check https://www.npmjs.com/package/morgan for output formats
+
+mongoose
+  .connect(process.env.MONGODB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('Connected to database successfully :)');
+    return app.listen({ port: PORT });
+  })
+  .then(() => {
+    console.log(
+      `Graphql server is running at http://localhost:${PORT}${server.graphqlPath}`
+    );
+  })
+  .catch((err) => {
+    console.log(err);
+  });

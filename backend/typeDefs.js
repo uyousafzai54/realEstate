@@ -1,11 +1,17 @@
 const { gql } = require('apollo-server');
 
 module.exports = gql`
-  type User {
+  type Listing {
     id: ID!
-    email: String!
-    token: String!
-    username: String!
-    token: String!
+    title: String!
+    address: String!
+    description: String!
+    image: String!
+  }
+  type Query {
+    getListings: String!
+  }
+  type Mutation {
+    editListing: String!
   }
 `;

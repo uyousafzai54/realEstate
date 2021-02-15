@@ -1,6 +1,45 @@
 import Head from "next/head";
 import auth0 from "./api/utils/auth0";
 import Link from "next/link";
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  color: white;
+  font-size: 25px; 
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  text-align: left;
+  `;
+
+const Mainbody = styled.h2`
+  color: white;
+  font-size: 50px; 
+  font-family: "Times New Roman", sans-serif;
+  text-align: center;
+  padding-top: 120px;
+  top: 50%;
+  `;
+
+const Bodybackground = styled.body`
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #0052D4 0%, #4364F7 100%), #6FB1FC;
+  background-size: cover;
+  `;
+
+const Mainbutton = styled.button`
+  border: solid;
+  color: white;
+  background-color: Transparent;
+  font-size: 20px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 70px;
+  `;
 
 export default function Home({ user }) {
   return (
@@ -10,40 +49,25 @@ export default function Home({ user }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <nav>
-          <div className="flex items-center justify-between py-4  ">
-            <div className="flex justify-between items-center">
-              <div className="text-2xl font-bold text-gray-800 md:text-3xl">
-                <a href="/randomPage">Random Page</a>
-              </div>
-            </div>
-            <div className="flex">
-              {user ? (
-                <Link
-                  href="/api/logout"
-                  className="rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
-                >
-                  <a>Logout</a>
-                </Link>
-              ) : (
-                <Link
-                  href="/api/login"
-                  className="rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
-                >
-                  <a>Login</a>
-                </Link>
-              )}
-            </div>
-          </div>
-        </nav>
-      </main>
-      <div>
-        <h1>Hi There! Welcome to the Home Page</h1>
-      </div>
+        <Bodybackground>
+
+            
+          <Title>Real Estate Website</Title>
+
+          <Mainbody>
+            Find or List Your Next Home Here
+          </Mainbody>
+
+          <Mainbutton>
+            Get Started
+          </Mainbutton>
+
+        </Bodybackground> 
+
     </>
   );
 }
+
 
 export async function getServerSideProps(context) {
   const session = await auth0.getSession(context.req);

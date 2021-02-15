@@ -49,11 +49,24 @@ export default function Home({ user }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Bodybackground>
+      
+      <header>
+      <Title>Real Estate Website</Title>
+      <nav class = "nav-menu">
+            <ul>
+              <li class="active"><a href="#intro">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#inspiration">Inspiration</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
 
-            
-          <Title>Real Estate Website</Title>
+      </header>
 
+
+
+      <Bodybackground>
           <Mainbody>
             Find or List Your Next Home Here
           </Mainbody>
@@ -61,8 +74,7 @@ export default function Home({ user }) {
           <Mainbutton>
             Get Started
           </Mainbutton>
-
-        </Bodybackground> 
+      </Bodybackground> 
 
     </>
   );

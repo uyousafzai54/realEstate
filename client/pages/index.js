@@ -7,7 +7,7 @@ const Header = styled.header`
   float: right;
   flex: 1;
   display: flex;
-  padding-right: 10px;
+  padding-right: 230px;
   `;
 
 
@@ -19,7 +19,7 @@ const Title = styled.h1`
   font-family: "Poppins", sans-serif;
   margin-top: 10px;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 150px;
   padding-top: 25px;
  
   `;
@@ -27,16 +27,19 @@ const Title = styled.h1`
 const Navmenu = styled.nav`
   &a:hover:before {
     visibility: visible;
+    text-decoration: none;
     width: 100%;
   }
   
   &li:hover > a:before {
     visibility: visible;
+    text-decoration: none;
     width: 100%;
   }
 
   &:active > a:before {
     visibility: visible;
+    text-decoration: none;
     width: 100%;
   }
 
@@ -75,9 +78,13 @@ const NavLink = styled.a`
 
   &:hover {
     color: #fff;
-  }
+    position: relative;
+    border-bottom: 2px solid white;
+    transition: width 0.2s, background-color 0.5s;
+ }
+
   &.active {
-    color: #fff;
+    text-decoration: none;
   }
 
   &:li:hover {
@@ -132,11 +139,11 @@ export default function Home({ user }) {
       
       <Navmenu class = "nav-menu">
             <ul class = "unordered">
-              <NavItems class="active"><NavLink href="#intro">Home</NavLink></NavItems>
-              <NavItems><NavLink href="#about">About</NavLink></NavItems>
-              <NavItems><NavLink href="#services">Services</NavLink></NavItems>
-              <NavItems><NavLink href="#inspiration">Inspiration</NavLink></NavItems>
-              <NavItems><NavLink href="#faq">FAQ</NavLink></NavItems>
+              <NavItems class="active"><NavLink className = "active" href="#intro">Home</NavLink></NavItems>
+              <NavItems><NavLink className = "active" href="#about">About</NavLink></NavItems>
+              <NavItems><NavLink className = "active" href="#services">Services</NavLink></NavItems>
+              <NavItems><NavLink className = "active" href="#inspiration">Inspiration</NavLink></NavItems>
+              <NavItems><NavLink className = "active" href="#faq">FAQ</NavLink></NavItems>
             </ul>
         </Navmenu>
 

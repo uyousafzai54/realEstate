@@ -144,7 +144,7 @@ export default function Home({ user }) {
       <Navmenu class = "nav-menu">
             <ul class = "unordered">
               <NavItems class="active"><NavLink className = "active" href="#intro">Home</NavLink></NavItems>
-              <NavItems><NavLink className = "active" href="#about">About</NavLink></NavItems>
+              <NavItems><NavLink className = "active" Link href="/client/pages/listings">Listings</NavLink></NavItems>
               <NavItems><NavLink className = "active" href="#services">Services</NavLink></NavItems>
               <NavItems><NavLink className = "active" href="#inspiration">Inspiration</NavLink></NavItems>
               <NavItems><NavLink className = "active" href="#faq">FAQ</NavLink></NavItems>

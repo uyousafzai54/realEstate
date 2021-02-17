@@ -11,6 +11,8 @@ const Header = styled.header`
   padding-right: 230px;
   `;
 
+
+
 const Title = styled.h1`
 
   color: white;
@@ -23,6 +25,10 @@ const Title = styled.h1`
 
  
   `;
+
+const Styledlink = styled.a`
+ text-decoration: none;
+`;
 
 const Navmenu = styled.nav`
   &a:hover:before {
@@ -144,7 +150,13 @@ export default function Home({ user }) {
       <Navmenu class = "nav-menu">
             <ul class = "unordered">
               <NavItems class="active"><NavLink className = "active" href="#intro">Home</NavLink></NavItems>
-              <NavItems><NavLink className = "active" Link href="/client/pages/listings">Listings</NavLink></NavItems>
+              <NavItems>
+                <NavLink className = "active" >
+                  <Link href="Makelistings">
+                    <Styledlink>Listings</Styledlink>
+                   </Link>
+                   </NavLink>
+              </NavItems>
               <NavItems><NavLink className = "active" href="#services">Services</NavLink></NavItems>
               <NavItems><NavLink className = "active" href="#inspiration">Inspiration</NavLink></NavItems>
               <NavItems><NavLink className = "active" href="#faq">FAQ</NavLink></NavItems>

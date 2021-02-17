@@ -3,14 +3,13 @@ import auth0 from "./api/utils/auth0";
 import Link from "next/link";
 import styled from 'styled-components';
 
+
 const Header = styled.header`
   float: right;
   flex: 1;
   display: flex;
   padding-right: 230px;
   `;
-
-
 
 const Title = styled.h1`
 
@@ -21,6 +20,7 @@ const Title = styled.h1`
   text-align: left;
   padding-left: 150px;
   padding-top: 25px;
+
  
   `;
 
@@ -61,7 +61,7 @@ const NavLink = styled.a`
 	font-size: 15px;
 	font-weight: 600;
 	padding: 0 3px;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Poppins", sans-serif;
 
   &:before {
     content: "";
@@ -81,23 +81,24 @@ const NavLink = styled.a`
     position: relative;
     border-bottom: 2px solid white;
     transition: width 0.2s, background-color 0.5s;
- }
-
-  &.active {
-    text-decoration: none;
   }
 
   &:li:hover {
     color: #fff;
   }
 
+  &.active {
+    text-decoration: none;
+  }
+
 `;
+
 
 
 const Mainbody = styled.h2`
   color: white;
   font-size: 50px; 
-  font-family: "Times New Roman", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   padding-top: 200px;
   `;
@@ -129,6 +130,9 @@ export default function Home({ user }) {
   return (
     <>
       <Head>
+      <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet"></link>
         <title>Real Estate App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -148,7 +152,7 @@ export default function Home({ user }) {
         </Navmenu>
 
       </Header>
-      <Title>Real Estate Website</Title>
+      <Title>Real Estate</Title>
 
       
           <Mainbody>

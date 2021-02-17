@@ -25,10 +25,67 @@ const Title = styled.h1`
   `;
 
 const Navmenu = styled.nav`
+  &a:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
+  
+  &li:hover > a:before {
+    visibility: visible;
+    width: 100%;
+  }
 
-
+  &:active > a:before {
+    visibility: visible;
+    width: 100%;
+  }
 
 `;
+
+const NavItems = styled.li` 
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 0 10px 24px;
+  float: left;
+  list-style-type: none;
+`;
+
+const NavLink = styled.a`
+  display: block;
+	position: relative;
+	color: rgba(255, 255, 255, 0.7);
+	transition: 0.3s;
+	font-size: 15px;
+	font-weight: 600;
+	padding: 0 3px;
+	font-family: "Open Sans", sans-serif;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+    }
+
+  &:hover {
+    color: #fff;
+  }
+  &.active {
+    color: #fff;
+  }
+
+  &:li:hover {
+    color: #fff;
+  }
+
+`;
+
 
 const Mainbody = styled.h2`
   color: white;
@@ -75,11 +132,11 @@ export default function Home({ user }) {
       
       <Navmenu class = "nav-menu">
             <ul class = "unordered">
-              <li class="active"><a href="#intro">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#inspiration">Inspiration</a></li>
-              <li><a href="#faq">FAQ</a></li>
+              <NavItems class="active"><NavLink href="#intro">Home</NavLink></NavItems>
+              <NavItems><NavLink href="#about">About</NavLink></NavItems>
+              <NavItems><NavLink href="#services">Services</NavLink></NavItems>
+              <NavItems><NavLink href="#inspiration">Inspiration</NavLink></NavItems>
+              <NavItems><NavLink href="#faq">FAQ</NavLink></NavItems>
             </ul>
         </Navmenu>
 

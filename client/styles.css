@@ -3,15 +3,15 @@ body {
 	margin-top: -10px;
 }
 
-.nav-menu > ul > li {
+/*.nav-menu > ul > li {
 	position: relative;
 	white-space: nowrap;
 	padding: 10px 0 10px 24px;
 	float: left;
 	list-style-type: none;
-}
+}*/
 
-.nav-menu a {
+/*.nav-menu a {
 	display: block;
 	position: relative;
 	color: rgba(255, 255, 255, 0.7);
@@ -20,9 +20,9 @@ body {
 	font-weight: 600;
 	padding: 0 3px;
 	font-family: "Open Sans", sans-serif;
-}
+}*/
 
-.nav-menu > ul > li > a:before {
+/*.nav-menu > ul > li > a:before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -33,17 +33,17 @@ body {
 	visibility: hidden;
 	width: 0px;
 	transition: all 0.3s ease-in-out 0s;
-}
+}*/
 
-.nav-menu a:hover:before,
+/*.nav-menu a:hover:before,
 .nav-menu li:hover > a:before,
 .nav-menu .active > a:before {
 	visibility: visible;
 	width: 100%;
-}
+}*/
 
-.nav-menu a:hover,
+/*.nav-menu a:hover,
 .nav-menu .active > a,
 .nav-menu li:hover > a {
 	color: #fff;
-}
+}*/

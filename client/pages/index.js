@@ -3,28 +3,48 @@ import auth0 from "./api/utils/auth0";
 import Link from "next/link";
 import styled from 'styled-components';
 
+const Header = styled.header`
+  float: right;
+  flex: 1;
+  display: flex;
+  padding-right: 10px;
+  `;
+
+
+
 const Title = styled.h1`
+
   color: white;
   font-size: 25px; 
   font-family: "Poppins", sans-serif;
   margin-top: 10px;
   text-align: left;
+  padding-left: 20px;
+  padding-top: 25px;
+ 
   `;
+
+const Navmenu = styled.nav`
+
+
+
+`;
 
 const Mainbody = styled.h2`
   color: white;
   font-size: 50px; 
   font-family: "Times New Roman", sans-serif;
   text-align: center;
-  padding-top: 120px;
-  top: 50%;
+  padding-top: 200px;
   `;
 
 const Bodybackground = styled.body`
+  
   width: 100%;
   height: 100vh;
   background: linear-gradient(45deg, #0052D4 0%, #4364F7 100%), #6FB1FC;
   background-size: cover;
+
   `;
 
 const Mainbutton = styled.button`
@@ -49,24 +69,24 @@ export default function Home({ user }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Bodybackground>
+      <Header>
       
-      <header>
-      <Title>Real Estate Website</Title>
-      <nav class = "nav-menu">
-            <ul>
+      
+      <Navmenu class = "nav-menu">
+            <ul class = "unordered">
               <li class="active"><a href="#intro">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#inspiration">Inspiration</a></li>
               <li><a href="#faq">FAQ</a></li>
             </ul>
-        </nav>
+        </Navmenu>
 
-      </header>
+      </Header>
+      <Title>Real Estate Website</Title>
 
-
-
-      <Bodybackground>
+      
           <Mainbody>
             Find or List Your Next Home Here
           </Mainbody>

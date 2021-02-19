@@ -48,7 +48,6 @@ const Navmenu = styled.nav`
     text-decoration: none;
     width: 100%;
   }
-
 `;
 
 const NavItems = styled.li` 

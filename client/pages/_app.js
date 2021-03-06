@@ -2,6 +2,7 @@ import { ApolloProvider } from 'react-apollo';
 
 import withData from '../withData';
 import Page from '../components/Page';
+import '../styles.css';
 
 function MyApp({ Component, pageProps, apollo }) {
   return (

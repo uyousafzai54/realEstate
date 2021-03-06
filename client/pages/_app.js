@@ -1,16 +1,11 @@
-import { ApolloProvider } from 'react-apollo';
-
-import withData from '../withData';
 import Page from '../components/Page';
 import '../styles.css';
 
-function MyApp({ Component, pageProps, apollo }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <ApolloProvider client={apollo}>
-      <Page>
-        <Component {...pageProps} />
-      </Page>
-    </ApolloProvider>
+    <Page>
+      <Component {...pageProps} />
+    </Page>
   );
 }
 

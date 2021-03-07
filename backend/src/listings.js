@@ -5,12 +5,12 @@ const joi = require('joi');
 const router = express.Router();
 
 const schema = joi.object({
-  title: Joi.string().trim().required(),
-  address: Joi.string().trim().required(),
-  type: Joi.string().trim().required(),
-  description: Joi.string().trim().required(),
-  price: Joi.integer(),
-  rooms: Joi.integer(),
+  title: joi.string().trim().required(),
+  address: joi.string().trim().required(),
+  type: joi.string().trim().required(),
+  description: joi.string().trim().required(),
+  price: joi.number(),
+  rooms: joi.number().integer(),
 });
 
 const db = monk(process.env.MONGO_DB);

@@ -107,17 +107,12 @@ class Makelistings extends React.Component {
           <Body>
             <Form>
               <Description />
-
               <Info>
                 <Address />
-
                 <Types />
-
                 <Beds />
-
                 <Price />
               </Info>
-
               <Submit />
             </Form>
           </Body>

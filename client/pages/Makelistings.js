@@ -6,48 +6,56 @@ import React from 'react';
 
 const All = styled.html`
   margin-top: -21px;
-  height: 100vh;
+  height: 101vh;
   width: 100vw;
   background: linear-gradient(to right, #56ccf2, #2f80ed);
+  margin-bottom: -20px;
 `;
 
 const Body = styled.body`
   margin-left: 100px;
   margin-right: 100px;
-  height: 90vh;
+  height: 800vh;
   background: linear-gradient(to right, #56ccf2, #2f80ed);
   align-items: center;
   left: 50%;
+  min-height: 100%;
 `;
 
 const Info = styled.div`
   float: right;
   margin-top: 10px;
+  margin-right: 50px;
+  font-family: "Poppins";
+
 `;
 
 const Form = styled.form`
+  margin-top: 70px;
+  
 
 `;
 
 const Title = styled.h1`
   color: white;
-  font-size: 25px;
+  font-size: 35px;
   font-family: 'Poppins', sans-serif;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
   padding-top: 25px;
 `;
 
 const Address = styled.input.attrs({
   type: 'text',
-  placeholder: 'Property',
+  placeholder: 'Address',
 })`
   display: flex;
   border: 0;
   box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
   padding: 15px;
   border-radius: 10px;
-  margin-left: -475px;
+  margin-left: -675px;
+  width: 200px;
 `;
 
 const Types = styled.input.attrs({
@@ -59,8 +67,10 @@ const Types = styled.input.attrs({
   box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
   padding: 15px;
   border-radius: 10px;
-  margin-left: -475px;
+  margin-left: -675px;
   margin-top: 50px;
+  width: 200px;
+  
 `;
 
 const Description = styled.input.attrs({
@@ -78,6 +88,7 @@ const Description = styled.input.attrs({
   margin-left: 30px;
   width: 700px;
   overflow-wrap: break-all;
+  margin-left: 100px;
 `;
 
 const Beds = styled.input.attrs({
@@ -89,8 +100,9 @@ const Beds = styled.input.attrs({
   box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
   padding: 15px;
   border-radius: 10px;
-  margin-left: -475px;
+  margin-left: -675px;
   margin-top: 50px;
+  width: 200px;
 `;
 
 const Baths = styled.input.attrs({
@@ -115,15 +127,16 @@ const Price = styled.input.attrs({
   box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
   padding: 15px;
   border-radius: 10px;
-  margin-left: -475px;
+  margin-left: -675px;
   margin-top: 50px;
+  width: 200px;
 `;
 
 const Submit = styled.input.attrs({
   type: 'submit',
 })`
   margin-top: 500px;
-  margin-left: 330px;
+  margin-lefT: -100px;
   background-color: Transparent;
   display: inline-block;
   padding: 0.5em 3em; 
@@ -131,13 +144,13 @@ const Submit = styled.input.attrs({
   box-sizing: border-box;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cambri', sans-serif;
   font-weight: 400;
   color: white;
   text-align: center;
   height: 70px;
   transition: all 0.15s;
-
+  width: 500px;
   &:hover {
     color: #DDDDDD;
     border-color: #DDDDDD;
@@ -177,7 +190,7 @@ class Makelistings extends React.Component {
             </Form>
 
         </All>
-        );
+        
       </form>
     );
   }

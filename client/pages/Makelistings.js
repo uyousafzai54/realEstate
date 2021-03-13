@@ -20,10 +20,13 @@ const Body = styled.body`
   left: 50%;
 `;
 
-const Info = styled.div``;
+const Info = styled.div`
+  float: right;
+  margin-top: 10px;
+`;
 
 const Form = styled.form`
-  text-align: center;
+
 `;
 
 const Title = styled.h1`
@@ -40,6 +43,11 @@ const Address = styled.input.attrs({
   placeholder: 'Property',
 })`
   display: flex;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: -475px;
 `;
 
 const Types = styled.input.attrs({
@@ -47,6 +55,12 @@ const Types = styled.input.attrs({
   placeholder: 'Type',
 })`
   display: flex;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: -475px;
+  margin-top: 50px;
 `;
 
 const Description = styled.input.attrs({
@@ -55,9 +69,13 @@ const Description = styled.input.attrs({
 })`
   float: left;
   flex: 1;
-  font-size: 25px;
-
+  font-size: 15px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 10px;
   padding-bottom: 300px;
+  margin-left: 30px;
   width: 700px;
   overflow-wrap: break-all;
 `;
@@ -67,6 +85,12 @@ const Beds = styled.input.attrs({
   placeholder: 'Number of Beds',
 })`
   display: flex;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: -475px;
+  margin-top: 50px;
 `;
 
 const Baths = styled.input.attrs({
@@ -74,6 +98,12 @@ const Baths = styled.input.attrs({
   placeholder: 'Number of Baths',
 })`
   display: flex;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: -475px;
+  margin-top: 50px;
 `;
 
 const Price = styled.input.attrs({
@@ -81,12 +111,42 @@ const Price = styled.input.attrs({
   placeholder: 'Price',
 })`
   display: flex;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: -475px;
+  margin-top: 50px;
 `;
 
 const Submit = styled.input.attrs({
   type: 'submit',
 })`
-  float: right;
+  margin-top: 500px;
+  margin-left: 330px;
+  background-color: Transparent;
+  display: inline-block;
+  padding: 0.5em 3em; 
+  border: 0.16em solid #FFFFFF;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  height: 70px;
+  transition: all 0.15s;
+
+  &:hover {
+    color: #DDDDDD;
+    border-color: #DDDDDD;
+  }
+
+  &:active {
+    color: #BBBBBB;
+    border-color: #BBBBBB;
+  }
 `;
 
 class Makelistings extends React.Component {
@@ -103,8 +163,8 @@ class Makelistings extends React.Component {
     return (
       <form>
         <All>
-          <Title>Make Your Listing Here</Title>
-          <Body>
+          <Title>Make Your Listing Here!</Title>
+
             <Form>
               <Description />
               <Info>
@@ -115,7 +175,7 @@ class Makelistings extends React.Component {
               </Info>
               <Submit />
             </Form>
-          </Body>
+
         </All>
         );
       </form>

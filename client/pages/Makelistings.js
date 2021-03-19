@@ -25,9 +25,8 @@ const Body = styled.body`
 const Info = styled.div`
   float: right;
   margin-top: 10px;
-  margin-right: 50px;
+  margin-right: -180px;
   font-family: "Poppins";
-
 `;
 
 const Form = styled.form`
@@ -39,7 +38,7 @@ const Form = styled.form`
 const Title = styled.h1`
   color: white;
   font-size: 35px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
   margin-top: 20px;
   text-align: center;
   padding-top: 25px;
@@ -54,6 +53,7 @@ const Address = styled.input.attrs({
   box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
   padding: 15px;
   border-radius: 10px;
+  
   margin-left: -675px;
   width: 200px;
 `;
@@ -136,7 +136,7 @@ const Submit = styled.input.attrs({
   type: 'submit',
 })`
   margin-top: 500px;
-  margin-lefT: -100px;
+  margin-lefT: 100px;
   background-color: Transparent;
   display: inline-block;
   padding: 0.5em 3em; 

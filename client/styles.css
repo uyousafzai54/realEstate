@@ -3,6 +3,8 @@ body {
 	margin-top: -10px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 /*.nav-menu > ul > li {
 	position: relative;
 	white-space: nowrap;

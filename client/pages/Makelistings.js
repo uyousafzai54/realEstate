@@ -55,7 +55,7 @@ const Address = styled.input.attrs({
   border-radius: 10px;
   
   margin-left: -675px;
-  width: 200px;
+  width: 400px;
 `;
 
 const Types = styled.input.attrs({
@@ -69,7 +69,7 @@ const Types = styled.input.attrs({
   border-radius: 10px;
   margin-left: -675px;
   margin-top: 50px;
-  width: 200px;
+  width: 400px;
   
 `;
 
@@ -102,7 +102,7 @@ const Beds = styled.input.attrs({
   border-radius: 10px;
   margin-left: -675px;
   margin-top: 50px;
-  width: 200px;
+  width: 400px;
 `;
 
 const Baths = styled.input.attrs({
@@ -129,7 +129,7 @@ const Price = styled.input.attrs({
   border-radius: 10px;
   margin-left: -675px;
   margin-top: 50px;
-  width: 200px;
+  width: 400px;
 `;
 
 const Submit = styled.input.attrs({

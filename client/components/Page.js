@@ -2,13 +2,14 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import PleaseSignIn from './PleaseSignIn';
+import Nav from './Nav';
 import theme from '../theme';
 
 const Page = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <PleaseSignIn>{children}</PleaseSignIn>
+      <Nav />
+      {children}
     </ThemeProvider>
   );
 };
